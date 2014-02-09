@@ -1,0 +1,22 @@
+<head>
+  <title>sankaistorytelling</title>
+</head>
+
+<body>
+  {{> story}}
+</body>
+
+<template name="story">
+  <div class="story">
+    {{#each fragments}}
+    <div class="fragment">
+    	{{text}}
+    </div>
+    {{/each}}
+
+	<div class="editorPanel">
+      <textarea class="editor"></textarea>
+      <input type="button" class="tell" value="append" />
+    </div>
+  </div>
+</template>
